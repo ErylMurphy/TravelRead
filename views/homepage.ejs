@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ./partials/header %>
+  </head>
+  <body>
+    <div class="page-container">
+
+      <h2 class="page-title">All States</h2>
+      <% states.forEach(state => { %>
+        <p><a href="/states/<%= state.id %>"><%= state.name %></a></p>
+      <% }) %>
+    </div>
+  </body>
+</html>

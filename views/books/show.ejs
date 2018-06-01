@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/header %>
+  </head>
+  <body>
+    <div class="page-container">
+
+      <div class="book-wrapper">
+        <blockquote><%= book.title %> – <%= book.author %></blockquote>
+        <div class="book-actions">
+          <form method="POST" action="/books/<%= book.id %>?_method=DELETE" class="delete-form">
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+          <a href="/books/<%= book.id %>/edit" class="edit-link">Edit</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
