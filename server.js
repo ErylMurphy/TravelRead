@@ -54,13 +54,9 @@ app.get("/books/:id", (request, response) => {
 
 app.delete("/books/:id", (request, response) => {
     const id = request.params.id;
-    const state_id = request.params.id;
-    Promise.all([
-        Book.allInState(state_id),
-        State.find(state_id),
-        Book.delete(id)])
-        .then(([books, state]) => {
-            response.render(302, "./states/show", { books: books, state: state });
+        Book.delete(id)
+        .then(book => {
+            response.redirect("..");
     });
 });
 
