@@ -5,9 +5,12 @@
   </head>
   <body>
     <div class="page-container">
-
       <div class="book-wrapper">
-        <blockquote><%= book.title %> – <%= book.author %></blockquote>
+      <h2><%= book.title %> </h2>
+      <h3><%= book.author %></h3>
+      <p><%= book.date %></p>
+      <p><%= book.description %></p>
+      <p><img src="<%= book.img %>"></p>
         <div class="book-actions">
           <form method="POST" action="/books/<%= book.id %>?_method=DELETE" class="delete-form">
             <button type="submit" class="delete-button">Delete</button>

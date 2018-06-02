@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -6,12 +5,9 @@
   </head>
   <body>
     <div class="page-container">
-      <h2 class="page-title"><%= state.name %> </h2>
-      <% books.forEach(book => { %>
-        <div class="book-wrapper">
-          <a href="/books/<%= book.id %>"><blockquote><%= book.title %> – <%= book.author %></blockquote></a>
-          <% }) %>
-        <form class="new-item-form" method="POST">
+
+      <h2 class="page-title">New Book</h2>
+      <form class="new-item-form" method="POST" action="/books">
         <label>Title</label>
         <input name="title" type="text" />
         <label>Author</label>
@@ -22,11 +18,14 @@
         <input name="description" type = "text">
         <label>Cover Image:</label>
         <input name="img" type = "text">
-        <label>State_ID</label>
-        <input name = "state_id" type="number">
+        <label>State</label>
+          <option value="">Select a state...</option>
+          <% states.forEach( state => { %>
+            <option value="<%= state.id %>"><%= state.name %></option>
+          <% }) %>
+        </select>
         <button type="submit">Create Book</button>
       </form>
-      </div>
     </div>
   </body>
 </html>

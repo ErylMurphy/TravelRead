@@ -7,7 +7,7 @@ State.all = () => {
 };
 
 State.find = id => {
-    return db.one("SELECT * FROM states WHERE id = $<id>", { id: id });
+    return db.one("SELECT * FROM states WHERE id = ${id}", { id: id });
 };
 
 module.exports = State;

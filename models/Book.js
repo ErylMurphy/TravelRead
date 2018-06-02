@@ -18,7 +18,7 @@ Book.allInState = state_id => {
 
 Book.create = newBook => {
     return db.one(
-        "INSERT INTO books (title, author, date, description, img) VALUES (${title}, ${author}, ${date}, ${description}, ${img}) RETURNING *",
+        "INSERT INTO books (title, author, date, description, img, state_id) VALUES (${title}, ${author}, ${date}, ${description}, ${img}, ${state_id}) RETURNING *",
         newBook
     );
 };

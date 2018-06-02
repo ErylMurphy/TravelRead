@@ -4,6 +4,7 @@ const Book = require("./models/Book");
 const State = require("./models/State");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+const redirect = require("express-redirect");
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(methodOverride("_method"));
 // Add the HTTP body onto the request object in all route handlers.
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//Add redirect
+redirect(app);
 // Allow the port to be set by an environment variable when run (PORT=4000 node server.js)
 // and fallback to a default to 4567 if it's not supplied.
 const PORT = process.env.PORT || 4567;
@@ -38,7 +41,7 @@ app.get("/states/:id", (request, response) => {
         Book.allInState(state_id),
         State.find(state_id)
     ]).then(([books, state]) => {
-        response.render("states/show", { books: books, state: state });
+        response.render("states/show", { books: books, state: state});
     });
 });
 
@@ -49,6 +52,35 @@ app.get("/books/:id", (request, response) => {
     });
 });
 
+app.delete("/books/:id", (request, response) => {
+    const id = request.params.id;
+    const state_id = request.params.id;
+    Promise.all([
+        Book.allInState(state_id),
+        State.find(state_id),
+        Book.delete(id)])
+        .then(([books, state]) => {
+            response.render(302, "./states/show", { books: books, state: state });
+    });
+});
+
+
+app.post('/states/:id', (request, response) => {
+    const state_id = request.params.id;
+    const newBook = request.body;
+    Promise.all([,
+        Book.create(newBook),
+        State.find(state_id)
+    ]).then(([books, state]) => {
+        response.redirect('back');
+    });
+});
+
+// app.get("/books/new", (request, response) => {
+// //     Book.all().then(books => {
+// //         response.render("books/new", { books: books });
+// //     });
+// // });
 
 // app.get("/categories", (request, response) => {
 //     Category.all().then(categories => {
@@ -72,19 +104,6 @@ app.get("/books/:id", (request, response) => {
 //     });
 // });
 
-// app.post("/quotes", (request, response) => {
-//     const newQuote = request.body;
-//     Quote.create(newQuote).then(quote => {
-//         response.redirect(302, "/quotes");
-//     });
-// });
-
-// app.delete("/quotes/:id", (request, response) => {
-//     const id = request.params.id;
-//     Quote.delete(id).then(quote => {
-//         response.redirect(302, "/quotes");
-//     });
-// });
 
 // app.get("/quotes/new", (request, response) => {
 //     Category.all().then(categories => {
