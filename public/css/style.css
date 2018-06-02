@@ -1,0 +1,27 @@
+body {
+  background-color: #efefef;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+h2 {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a :hover {
+    color: blue;
+}
+
+p :hover {
+    color: blue;
+}
+
+img {
+    height: 300px;
+
+}

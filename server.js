@@ -60,7 +60,6 @@ app.delete("/books/:id", (request, response) => {
     });
 });
 
-
 app.post('/states/:id', (request, response) => {
     const state_id = request.params.id;
     const newBook = request.body;
@@ -72,6 +71,20 @@ app.post('/states/:id', (request, response) => {
     });
 });
 
+app.get("/books/:id/edit", (request, response) => {
+    const id = request.params.id;
+    Book.find(id).then(bookData => {
+        response.render("books/edit", { book: bookData })
+    })
+});
+
+app.put("/books/:id", (request, response) => {
+    const updatedBook = request.body;
+    updatedBook.id = request.params.id;
+    Book.update(updatedBook).then(bookData => {
+        response.redirect(302, `/books/${updatedBook.id}`);
+    })
+});
 // app.get("/books/new", (request, response) => {
 // //     Book.all().then(books => {
 // //         response.render("books/new", { books: books });
