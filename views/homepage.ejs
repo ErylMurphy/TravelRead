@@ -5,11 +5,11 @@
   </head>
   <body>
     <div class="page-container">
-
-      <h2 class="page-title">All States</h2>
+      <div class = "allpostcards">
       <% states.forEach(state => { %>
-        <p><a href="/states/<%= state.id %>"><img src="<%= state.state_img %>"></a></p>
+        <p><a href="/states/<%= state.id %>"><img class = "postcard" src="<%= state.state_img %>"></a></p>
       <% }) %>
+      </div>
     </div>
   </body>
 </html>

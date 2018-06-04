@@ -1,84 +1,108 @@
-
 <!doctype html>
 <html>
-  <head>
-    <% include ../partials/header %>
-  </head>
-  <body>
-    <div class="page-container">
-    <a href="/">Home</a>
-      <h2 class="page-title"><%= state.name %> </h2>
-      <% books.forEach(book => { %>
-        <div class="book-wrapper">
-          <a href="/books/<%= book.id %>"><blockquote><%= book.title %> – <%= book.author %></blockquote><img src="<%= book.img %>"></a>
-          <% }) %>
-        <form class="new-item-form" method="POST">
-        <label>Title</label>
-        <input name="title" type="text" />
-        <label>Author</label>
-        <input name="author" type="text" />
-        <label>Date of Publication</label>
-        <input name="date" type="number" />
-        <label>Description:</label>
-        <input name="description" type = "text">
-        <label>Cover Image:</label>
-        <input name="img" type = "text">
-        <label>State</label>
-        <select name="state_id">
-    <option value="1">Alabama</option>
-    <option value="2">Alaska</option>
-    <option value="3">Arizona</option>
-    <option value="4">Arkansas</option>
-    <option value="5">California</option>
-    <option value="6">Colorado</option>
-    <option value="7">Connecticut</option>
-    <option value="8">Delaware</option>
-    <option value="9">Florida</option>
-    <option value="10">Georgia </option>
-    <option value="11">Hawaii </option>
-    <option value="12">Idaho </option>
-    <option value="13">Illinois </option>
-    <option value="14">Indiana </option>
-    <option value="15">Iowa </option>
-    <option value="16">Kansas </option>
-    <option value="17">Kentucky </option>
-    <option value="18">Louisiana </option>
-    <option value="19">Maine </option>
-    <option value="20">Maryland </option>
-    <option value="21">Massachusetts </option>
-    <option value="22">Michigan </option>
-    <option value="23">Minnesota </option>
-    <option value="24">Mississippi </option>
-    <option value="25">Missouri </option>
-    <option value="26">Montana </option>
-    <option value="27">Nebraska </option>
-    <option value="28">Nevada </option>
-    <option value="29">New Hampshire </option>
-    <option value="30">New Jersey </option>
-    <option value="31">New Mexico </option>
-    <option value="32">New York </option>
-    <option value="33">North Carolina </option>
-    <option value="34">North Dakota </option>
-    <option value="35">Ohio </option>
-    <option value="36">Oklahoma </option>
-    <option value="37">Oregon </option>
-    <option value="38">Pennsylvania </option>
-    <option value="39">Rhode Island </option>
-    <option value="40">South Carolina </option>
-    <option value="41">South Dakota </option>
-    <option value="42">Tennessee </option>
-    <option value="43">Texas </option>
-    <option value="44">Utah </option>
-    <option value="45">Vermont </option>
-    <option value="46">Virginia </option>
-    <option value="47">Washington </option>
-    <option value="48">West Virginia </option>
-    <option value="49">Wisconsin </option>
-    <option value="50">Wyoming </option>
-  </select>
-        <button type="submit">Create Book</button>
-      </form>
+
+<head>
+  <% include ../partials/header %>
+</head>
+
+<body>
+  <div class="page-container">
+    <h2 class="page-title">what to read in
+      <span class="statenameshow">
+        <%= state.name %>
+      </span>
+    </h2>
+    <main class="states-main">
+      <div class="books-wrapper">
+        <% books.forEach(book => { %>
+          <div class="book-wrapper">
+            <a class="bookzoom" href="/books/<%= book.id %>">
+              <img src="<%= book.img %>">
+            </a>
+          </div>
+        <% }) %>
       </div>
-    </div>
-  </body>
+        
+      <aside>
+        <form class="new-item-form" method="POST">
+          <p>
+            <label>Title</label>
+            <input name="title" type="text" />
+          </p>
+          <p>
+            <label>Author</label>
+            <input name="author" type="text" />
+          </p>
+          <p>
+            <label>Date of Publication</label>
+            <input name="date" type="number" />
+          </p>
+          <p>
+            <label>Description:</label>
+            <input name="description" type="text">
+          </p>
+          <p>
+            <label>Cover Image:</label>
+            <input name="img" type="text">
+          </p>
+          <label>State</label>
+          <select name="state_id">
+            <option value="1">Alabama</option>
+            <option value="2">Alaska</option>
+            <option value="3">Arizona</option>
+            <option value="4">Arkansas</option>
+            <option value="5">California</option>
+            <option value="6">Colorado</option>
+            <option value="7">Connecticut</option>
+            <option value="8">Delaware</option>
+            <option value="9">Florida</option>
+            <option value="10">Georgia </option>
+            <option value="11">Hawaii </option>
+            <option value="12">Idaho </option>
+            <option value="13">Illinois </option>
+            <option value="14">Indiana </option>
+            <option value="15">Iowa </option>
+            <option value="16">Kansas </option>
+            <option value="17">Kentucky </option>
+            <option value="18">Louisiana </option>
+            <option value="19">Maine </option>
+            <option value="20">Maryland </option>
+            <option value="21">Massachusetts </option>
+            <option value="22">Michigan </option>
+            <option value="23">Minnesota </option>
+            <option value="24">Mississippi </option>
+            <option value="25">Missouri </option>
+            <option value="26">Montana </option>
+            <option value="27">Nebraska </option>
+            <option value="28">Nevada </option>
+            <option value="29">New Hampshire </option>
+            <option value="30">New Jersey </option>
+            <option value="31">New Mexico </option>
+            <option value="32">New York </option>
+            <option value="33">North Carolina </option>
+            <option value="34">North Dakota </option>
+            <option value="35">Ohio </option>
+            <option value="36">Oklahoma </option>
+            <option value="37">Oregon </option>
+            <option value="38">Pennsylvania </option>
+            <option value="39">Rhode Island </option>
+            <option value="40">South Carolina </option>
+            <option value="41">South Dakota </option>
+            <option value="42">Tennessee </option>
+            <option value="43">Texas </option>
+            <option value="44">Utah </option>
+            <option value="45">Vermont </option>
+            <option value="46">Virginia </option>
+            <option value="47">Washington </option>
+            <option value="48">West Virginia </option>
+            <option value="49">Wisconsin </option>
+            <option value="50">Wyoming </option>
+          </select>
+          <button type="submit">Create Book</button>
+        </form>
+      </aside>
+    </main>
+  </div>
+</body>
+
 </html>

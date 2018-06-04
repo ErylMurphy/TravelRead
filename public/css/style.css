@@ -1,27 +1,90 @@
 body {
-  background-color: #efefef;
-  font-family: "Roboto", sans-serif;
-  text-decoration: none;
+    background: #f6eae4;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #f34f4b;
+    margin: 20px;
+}
+
+aside {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-left: 1px solid red;
 }
 
 h2 {
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.statenameshow {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #f34f4b;
 }
 
-a :hover {
-    color: blue;
+.states-main {
+    display: flex;
 }
 
-p :hover {
-    color: blue;
+.book-wrapper {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #f34f4b;
+    justify-content: center;
+}
+
+.books-wrapper {
+    width: 60%;
+    display: flex;
 }
 
 img {
-    height: 300px;
-
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
 }
+
+.book-img {
+    display: block;
+    width: 70%;
+    flex-shrink: 0;
+}
+
+
+.allpostcards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition-timing-function: linear;
+    transform: scale(.5);
+}
+
+.allpostcards :hover {
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.postcard {
+    height: 200px;
+}
+
+.bookzoom :hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+.bookzoom {
+    display: flex;
+}
+
+/* <div>Icons made by <a href="https://www.flaticon.com/authors/situ-herrera" title="Situ Herrera">Situ Herrera</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
