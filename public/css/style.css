@@ -1,27 +1,45 @@
 body {
-    background: #f6eae4;
+    background: #8EE4AF;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
-    color: #f34f4b;
-    margin: 20px;
+    color: #05386B;
+    /* margin: 20px; */
+}
+
+.webheader {
+    font-family: 'Playfair Display', serif;
+    color: #05386B;
+    font-style: italic;
+    font-size: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    background: #8EE4AF;
+    padding: 20px;
 }
 
 .home {
     box-sizing: border-box;
     float: right;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin: 20px;
+    font-size: 20px;
 }
 
 aside {
-    width: 30%;
+    width: 35%;
     box-sizing: border-box;
     padding: 20px;
-    border-left: 1px solid red;
+    border-left: 1px solid #05386B;
 }
 
 h2 {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
+    font-size: 50px;
     padding: 20px;
 }
 
@@ -55,14 +73,14 @@ h3 {
 }
 
 .statenameshow {
-    font-size: 50px;
+    font-size: 70px;
     font-style: italic;
     font-weight: bold;
 }
 
 a {
     text-decoration: none;
-    color: #f34f4b;
+    color: #05386B;
 }
 
 .states-main {
@@ -71,8 +89,9 @@ a {
 
 .book-wrapper {
     font-family: 'Roboto', sans-serif;
-    color: #f34f4b;
-    justify-content: center;
+    color: #05386B;
+    justify-content: center; 
+    flex-shrink: 0;
 }
 
 .books-wrapper {
@@ -80,6 +99,8 @@ a {
     display: flex;
     box-sizing: inherit;
     overflow-y: auto;
+    margin: 20px;
+    flex-wrap: wrap;
 }
 
 img {
@@ -107,7 +128,7 @@ img {
     font-style: italic;
     background: none;
     border: none;
-    color: #f34f4b;
+    color: #05386B;
 }
 
 .allpostcards {
@@ -116,6 +137,8 @@ img {
     flex-wrap: wrap;
     transition-timing-function: linear;
     transform: scale(1);
+    position: relative;
+    margin-top: 150px;
 }
 
 .allpostcards :hover {
