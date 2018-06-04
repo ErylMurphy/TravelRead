@@ -3,7 +3,7 @@ const db = require("../db/connection");
 const State = {};
 
 State.all = () => {
-    return db.any("SELECT * FROM states");
+    return db.any("SELECT * FROM states ORDER BY id ASC");
 };
 
 State.find = id => {

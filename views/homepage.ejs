@@ -8,7 +8,7 @@
 
       <h2 class="page-title">All States</h2>
       <% states.forEach(state => { %>
-        <p><a href="/states/<%= state.id %>"><%= state.name %></a></p>
+        <p><a href="/states/<%= state.id %>"><img src="<%= state.state_img %>"></a></p>
       <% }) %>
     </div>
   </body>
