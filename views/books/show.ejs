@@ -5,12 +5,14 @@
   </head>
   <body>
     <div class="bookpage-container">
+    <div class = "bookpageshow">
       <div class="book-wrapper">
-      <h2><%= book.title %> </h2>
-      <h3><%= book.author %></h3>
+      <h2 class = "title"><%= book.title %><span class = "author"> by <%= book.author %> </span></h2>
+    
       <p><%= book.date %></p>
-      <p><%= book.description %></p>
-      <p class = "book-img"><img src="<%= book.img %>"></p>
+      <p class = "description"><%= book.description %></p>
+      <img class = "book-img" src="<%= book.img %>">
+      </div>
         <div class="book-actions">
           <form method="POST" action="/books/<%= book.id %>?_method=DELETE" class="delete-form">
             <button type="submit" class="delete-button">Delete</button>

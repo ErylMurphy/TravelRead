@@ -6,8 +6,13 @@ body {
     margin: 20px;
 }
 
+.home {
+    box-sizing: border-box;
+    float: right;
+}
+
 aside {
-    width: 40%;
+    width: 30%;
     box-sizing: border-box;
     padding: 20px;
     border-left: 1px solid red;
@@ -17,6 +22,36 @@ h2 {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
     font-size: 40px;
+    padding: 20px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    /* font-style: italic; */
+    padding-bottom: 15px;
+}
+
+.title {
+    font-style: italic;
+}
+
+.author {
+    font-size: 30px;
+    font-style: normal;
+}
+
+.description {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px;
+}
+
+.bookpageshow {
+    text-align: center;
+    padding: 40px;
 }
 
 .statenameshow {
@@ -35,42 +70,56 @@ a {
 }
 
 .book-wrapper {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 20px;
     font-family: 'Roboto', sans-serif;
     color: #f34f4b;
     justify-content: center;
 }
 
 .books-wrapper {
-    width: 60%;
+    width: 65%;
     display: flex;
+    box-sizing: inherit;
+    overflow-y: auto;
 }
 
 img {
-    display: block;
-    width: 100%;
+    height: 300px;
     flex-shrink: 0;
+    display: block;
+    padding: 10px;
 }
 
 .book-img {
-    display: block;
-    width: 70%;
-    flex-shrink: 0;
+    display: inline-block;
+    opacity: .8;
+    z-index: -1;
 }
 
+.edit-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.delete-button {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-style: italic;
+    background: none;
+    border: none;
+    color: #f34f4b;
+}
 
 .allpostcards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     transition-timing-function: linear;
-    transform: scale(.5);
+    transform: scale(1);
 }
 
 .allpostcards :hover {
-    transform: scale(1);
+    transform: scale(1.1);
     transition: all 0.4s;
 }
 
