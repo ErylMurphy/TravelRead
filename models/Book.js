@@ -18,10 +18,11 @@ Book.allInState = state_id => {
 
 Book.create = newBook => {
     return db.one(
-        "INSERT INTO books (title, author, date, description, img, state_id) VALUES (${title}, ${author}, ${date}, ${description}, ${img}, ${state_id}) RETURNING *",
+        "INSERT INTO books (title, author, date, description, img, state_id) VALUES (${title}, ${author}, ${date}, ${description}, ${img}, ${id}) RETURNING *",
         newBook
     );
 };
+//
 
 Book.delete = id => {
     return db.result("DELETE FROM books WHERE id = ${id}", { id: id });

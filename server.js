@@ -63,10 +63,11 @@ app.delete("/books/:id", (request, response) => {
 app.post('/states/:id', (request, response) => {
     const state_id = request.params.id;
     const newBook = request.body;
+    newBook.id = state_id;
     Promise.all([,
         Book.create(newBook),
         State.find(state_id)
-    ]).then(([books, state]) => {
+    ]).then(([books, state, id]) => {
         response.redirect('back');
     });
 });
