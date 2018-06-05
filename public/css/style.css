@@ -6,6 +6,8 @@ body {
     /* margin: 20px; */
 }
 
+/* partials */
+
 .webheader {
     font-family: 'Playfair Display', serif;
     color: #05386B;
@@ -73,8 +75,8 @@ h3 {
 
 .description {
     margin: 0 auto;
-    width: 50%;
-    text-align: center;
+    width: 70%;
+    text-align: justify;
     line-height: 30px;
     padding: 20px;
 }
@@ -110,7 +112,7 @@ a {
     width: 65%;
     display: flex;
     box-sizing: inherit;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin: 20px;
     flex-wrap: wrap;
 }

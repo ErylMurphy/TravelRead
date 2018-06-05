@@ -1,14 +1,15 @@
-DROP DATABASE IF EXISTS travelread;
-CREATE DATABASE travelread;
+-- DROP DATABASE IF EXISTS travelread;
+-- CREATE DATABASE travelread;
 
-\c travelread
+-- \c travelread
 
-DROP TABLE IF EXISTS states;
+DROP TABLE IF EXISTS states CASCADE;
 DROP TABLE IF EXISTS books;
 
 CREATE TABLE states (
   id SERIAL PRIMARY KEY,
-  name TEXT
+  name TEXT,
+  state_img TEXT
 );
 
 CREATE TABLE books (
