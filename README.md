@@ -19,16 +19,16 @@ Aspirations:
 - To add a page where users can store their reading wishlist. 
 
 Homepage: 
-<img src = "https://imgur.com/a/2FxfxB9">
+![Imgur Image](https://imgur.com/a/2FxfxB9)
 
 States Show page: 
-<img src = "https://imgur.com/3b2lsHe">
+![Imgur Image]("https://imgur.com/3b2lsHe")
 
 Books Show page: 
-<img src = "https://imgur.com/wwgI76P">
+![Imgur Image]("https://imgur.com/wwgI76P")
 
 Edit page: 
-<img src = "https://imgur.com/a/2FxfxB9">
+![Imgur Image]("https://imgur.com/a/2FxfxB9")
 
 
 
