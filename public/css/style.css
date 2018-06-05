@@ -77,7 +77,6 @@ aside .statesdescription {
 
 aside button {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
     box-sizing: border-box;
     font-size: 20px;
     border: 1px solid #05386B;
@@ -176,19 +175,41 @@ img {
 
 .edit-link {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
     font-style: italic;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #05386B;
+    padding: 10px;
+    width: 80px;
+}
+
+.edit-link:hover {
+    background-color: #05386B;
+    color: #8EE4AF;
 }
 
 .delete-button {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
     font-style: italic;
     background: none;
-    border: none;
     color: #05386B;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #05386B;
+    margin-right: 50px;
+    padding: 10px;
 }
 
+.delete-button:hover {
+    background-color: #05386B;
+    color: #8EE4AF;
+}
+
+.book-actions {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
 .allpostcards {
     display: flex;
     justify-content: center;
