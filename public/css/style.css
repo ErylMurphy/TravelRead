@@ -29,6 +29,18 @@ body {
     font-size: 20px;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #05386B;
+    color: #8EE4AF;
+    text-align: center;
+    padding: 8px;
+    font-family: "Roboto", sans-serif;
+}
+
 aside {
     width: 35%;
     box-sizing: border-box;
@@ -90,7 +102,7 @@ a {
 .book-wrapper {
     font-family: 'Roboto', sans-serif;
     color: #05386B;
-    justify-content: center; 
+    justify-content: center;
     flex-shrink: 0;
 }
 
@@ -157,6 +169,39 @@ img {
 
 .bookzoom {
     display: flex;
+}
+
+/* Edit Page Styling
+*/
+
+.edit-page-container {
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+.edit-page-title {
+    font-style: italic;
+}
+
+.flex-outer input {
+    width: 75%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flex-outer label {
+    display: block;
+    padding: 5px;
+}
+
+.edit-button {
+    margin-top: 20px;
+}
+
+.edit-description {
+    display: block;
+    height: 100px;
+    padding: 0;
 }
 
 /* <div>Icons made by <a href="https://www.flaticon.com/authors/situ-herrera" title="Situ Herrera">Situ Herrera</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
