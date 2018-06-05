@@ -1,5 +1,5 @@
--- DROP DATABASE IF EXISTS travelread;
--- CREATE DATABASE travelread;
+DROP DATABASE IF EXISTS travelread;
+CREATE DATABASE travelread;
 
 \c travelread
 
