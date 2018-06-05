@@ -23,12 +23,22 @@ body {
 }
 
 .home {
+    border: 1px solid #05386B;
+    padding: 10px;
     box-sizing: border-box;
     float: right;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     margin: 20px;
     font-size: 20px;
+    top: 0;
+    position: fixed;
+    right: 10px;
+}
+
+.home:hover {
+    background-color: #05386B;
+    color: #8EE4AF;
 }
 
 footer {
@@ -48,6 +58,38 @@ aside {
     box-sizing: border-box;
     padding: 20px;
     border-left: 1px solid #05386B;
+    position: fixed;
+    right: 0;
+}
+
+aside label {
+    display: block;
+    padding: 5px;
+}
+
+aside input {
+    width: 300px;
+}
+
+aside .statesdescription {
+    height: 50px;
+}
+
+aside button {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 1px solid #05386B;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #8EE4AF;
+    color: #05386B;
+}
+
+aside button:hover {
+    background-color: #05386B;
+    color: #8EE4AF;
 }
 
 h2 {
@@ -55,6 +97,7 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     padding: 20px;
+    background-color: #8EE4AF;
 }
 
 h3 {
@@ -115,6 +158,7 @@ a {
     overflow-y: scroll;
     margin: 20px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 img {
@@ -189,6 +233,7 @@ img {
     width: 75%;
     padding: 10px;
     box-sizing: border-box;
+    font-size: 12px;
 }
 
 .flex-outer label {
@@ -203,7 +248,7 @@ img {
 .edit-description {
     display: block;
     height: 100px;
-    padding: 0;
+    padding: 5px;
 }
 
 /* <div>Icons made by <a href="https://www.flaticon.com/authors/situ-herrera" title="Situ Herrera">Situ Herrera</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
