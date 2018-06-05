@@ -15,8 +15,20 @@ Challenges:
 Aspirations: 
 
 - To make TravelRead global.
-- To utilize and API to make the addition of books easier. 
+- To utilize an API to make the addition of books easier. 
 - To add a page where users can store their reading wishlist. 
+
+Homepage: 
+<img src = "https://imgur.com/a/2FxfxB9">
+
+States Show page: 
+<img src = "https://imgur.com/3b2lsHe">
+
+Books Show page: 
+<img src = "https://imgur.com/wwgI76P">
+
+Edit page: 
+<img src = "https://imgur.com/a/2FxfxB9">
 
 
 
