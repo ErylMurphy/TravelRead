@@ -28,7 +28,7 @@ Books Show page:
 ![Imgur Image](https://imgur.com/wwgI76P.jpg)
 
 Edit page: 
-![Imgur Image](https://i.imgur.com/wwgI76P.png)
+![Imgur Image](https://i.imgur.com/qx5QZT4.png)
 
 
 
