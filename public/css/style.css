@@ -69,6 +69,9 @@ aside label {
 
 aside input {
     width: 300px;
+    background-color: #EDF5E1;
+    border-style: solid;
+    border: 1px solid #EDF5E1;
 }
 
 aside .statesdescription {
@@ -177,10 +180,10 @@ img {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid #05386B;
-    padding: 10px;
-    width: 80px;
+    padding: 8px;
+    width: 60px;
 }
 
 .edit-link:hover {
@@ -194,10 +197,10 @@ img {
     background: none;
     color: #05386B;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid #05386B;
     margin-right: 50px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .delete-button:hover {
@@ -206,10 +209,11 @@ img {
 }
 
 .book-actions {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
+
 .allpostcards {
     display: flex;
     justify-content: center;
@@ -255,6 +259,9 @@ img {
     padding: 10px;
     box-sizing: border-box;
     font-size: 12px;
+    background-color: #EDF5E1;
+    border-style: solid;
+    border: 1px solid #EDF5E1;
 }
 
 .flex-outer label {
@@ -264,6 +271,20 @@ img {
 
 .edit-button {
     margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    background: none;
+    color: #05386B;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: 1px solid #05386B;
+    margin-right: 50px;
+    padding: 8px;
+}
+
+.edit-button:hover {
+    background-color: #05386B;
+    color: #8EE4AF;
 }
 
 .edit-description {
