@@ -23,7 +23,8 @@
         <input value="<%= book.date %>" type="number" name="date" />
         <li>
           <label>Description:</label>
-          <input class = "edit-description" value="<%= book.description %>" type="text" name="description">
+          <textarea class = "edit-description" rows = "10" cols = "100" value="<%= book.description %>" type="text" name="description">
+          <%= book.description %></textarea>
         </li>
         <li>
           <label>Cover Image:</label>
