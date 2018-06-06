@@ -1,20 +1,26 @@
 <!doctype html>
 <html>
-  <head>
-    <% include ./partials/hpheader %>
-  </head>
-  <body>
-  <h1 class = "webheader"> where are you going?</h1>
-    <div class="page-container">
-      <div class = "allpostcards">
-      <% states.forEach(state => { %>
-        <p><a href="/states/<%= state.id %>"><img class = "postcard" src="<%= state.state_img %>"></a></p>
-      <% }) %>
-      </div>
-    </div>
-  </body>
-  <footer>
-    <% include ./partials/footer %>
-  </footer>
-</html>
 
+<head>
+  <% include ./partials/hpheader %>
+</head>
+
+<body>
+  <h1 class="webheader"> where are you going?</h1>
+  <div class="page-container">
+    <div class="allpostcards">
+      <% states.forEach(state => { %>
+        <p>
+          <a href="/states/<%= state.id %>">
+            <img class="postcard" src="<%= state.state_img %>">
+          </a>
+        </p>
+        <% }) %>
+    </div>
+  </div>
+</body>
+<footer>
+  <% include ./partials/footer %>
+</footer>
+
+</html>

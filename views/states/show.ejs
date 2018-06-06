@@ -20,11 +20,11 @@
               <img src="<%= book.img %>">
             </a>
           </div>
-        <% }) %>
+          <% }) %>
       </div>
-        
+
       <aside>
-      <h3> add a book </h3>
+        <h3> add a book </h3>
         <form class="new-item-form" method="POST">
           <p>
             <label>Title:</label>
@@ -40,7 +40,7 @@
           </p>
           <p>
             <label>Description:</label>
-            <input name="description" type="text">
+            <textarea name="description" type="text"></textarea>
           </p>
           <p>
             <label>Cover Image:</label>
@@ -55,4 +55,5 @@
 <footer>
   <% include ../partials/footer %>
 </footer>
+
 </html>
